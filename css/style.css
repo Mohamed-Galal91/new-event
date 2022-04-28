@@ -1,0 +1,324 @@
+/* Start Global Rules */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    /* scroll-behavior: smooth; */
+    font-size: 10px;
+}
+body {
+    font-family: sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+button,
+input {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* End Global Rules */
+
+/* Start Variables */
+:root {
+    --primary-color: #F2545F;
+    --secondary-color: #333;
+    --white-color: #fff;
+    --gray-color: #DDD;
+    --dark-gray-color: #707070;
+    --light-blue-color: #66CCFF;
+    --section-padding: 11rem;
+}
+
+/* End Variables */
+
+
+/* ==================================================================================
+Start Intro
+==================================================================================   */
+.intro {
+    min-height: 100vh;
+    background: url(../images/images/intro-bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.intro .nav-bar {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    padding: 2rem 0;
+}
+.intro .nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro .nav-bar .logo {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+.intro .nav-bar .logo a {
+    color: var(--white-color);
+}
+.intro .nav-bar .logo span {
+    color: var(--primary-color);
+    font-weight: 100;
+}
+
+.intro .nav-links ul {
+    text-transform: capitalize;
+    display: flex;
+}
+.intro .nav-links ul li a {
+    display: block;
+    color: var(--gray-color);
+    font-size: 1.6rem;
+}
+.intro .nav-links ul li:not(:last-child) a {
+    margin-right: 3rem;
+}
+.intro .nav-links ul li a:hover,
+.intro .nav-links ul .active a {
+    color: var(--light-blue-color);
+}
+
+.intro .intro-content {
+    padding-top: 20rem;
+    text-align: center;
+}
+.intro .intro-content p {
+    color: var(--gray-color);
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-bottom: 8rem;
+}
+.intro .intro-content h1 {
+    color: var(--white-color);
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    margin-bottom: 5.5rem;
+}
+.intro .intro-content  .intro-btn .one,
+.intro .intro-content  .intro-btn .two {
+    padding: 1.4rem 4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: var(--white-color);
+    text-transform: uppercase;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+.intro .intro-content  .intro-btn .one {
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    margin-right: 1.4rem;
+}
+.intro .intro-content  .intro-btn .one:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+}
+.intro .intro-content  .intro-btn .two {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.intro .intro-content  .intro-btn .two:hover {
+    background-color: transparent;
+    border-color: var(--white-color);
+}
+
+.menu input {
+    display: none;
+}
+.menu .toggle-icon {
+    color: var(--white-color);
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/* ======================================== Media Queries ======================================== */
+
+@media (max-width: 992px) {
+    .menu .toggle-icon {
+        display: flex;
+    }
+
+   .menu .toggle-icon:checked ~ ul {
+        display: block !important;
+        max-height: 400px;
+    }
+    .intro .nav-links ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 7.5rem;
+        width: 100%;
+        height: calc(100vh - 7.5rem);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary-color);
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+}
+    .intro .nav-links ul li a {
+        margin-right: 0 !important;
+        font-size: 1.6rem;
+        color: var(--gray-color);
+    }
+    .intro .nav-links ul li:not(:last-of-type) a {
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+
+
+/* ================================================================================== 
+Start Overview
+==================================================================================   */
+.overview {
+    padding: var(--section-padding) 0;
+}
+.overview .overview-one {
+    display: flex;
+    justify-content: space-between;
+}
+.overview .overview-one .content span {
+    display: block;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 5rem;
+}
+.overview .overview-one .content p {
+    max-width: 55rem;
+    font-size: 1.6rem;
+    color: var(--dark-gray-color);
+    font-weight: 100;
+    line-height: 1.6;
+}
+.overview .overview-one .content p:last-of-type {
+    margin-top: 2.2rem;
+}
+.overview .overview-one img {
+    width: 54rem;
+}
+
+
+.overview .overview-two {
+    margin: var(--section-padding) 0;
+    background-color: #222222;
+    padding: 6rem;
+    text-align: center;
+}
+.overview .overview-two .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+.overview .overview-two i {
+    font-size: 4.5rem;
+    color: var(--primary-color);
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin: 0 auto 2.5rem;
+}
+.overview .overview-two h2 {    
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    color: var(--gray-color);
+    font-weight: 400;
+}
+.overview .overview-two p {
+    font-size: 1.7rem;
+    color: var(--dark-gray-color);
+    line-height: 1.6;
+    margin: 2rem 0 3rem;
+}
+
+.overview .overview-three .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.overview .overview-three .content h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+.overview .overview-three .content p:first-of-type {
+    font-size: 1.8rem;
+    color: var(--dark-gray-color);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+.overview .overview-three .content p:last-of-type {
+    font-size: 1.6rem;
+    color: var(--dark-gray-color);
+    line-height: 1.5;
+}
+
+
+/* ======================================== Media Queries ======================================== */
+
+
+
+
+
+
+
+
